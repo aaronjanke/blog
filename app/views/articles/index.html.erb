@@ -1,10 +1,14 @@
-<h1>Home Page Of ThatBlog</h1>
+<center>
+    <h1>Home Page Of ThatBlog</h1>
 
+<hr>
 <% @articles.each do |article| %>
 
-<%= article.title %> * <%= article.description %> | <%= link_to "Show Post", article_path(article) %> | <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are You Sure?"} %> | <%= link_to "Edit", edit_article_path(article) %><br>
+<strong><%= article.title %></strong><br><br><%= article.description %><br><br> | <%= link_to "Show Post", article_path(article) %> | <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are You Sure?"} %> | <%= link_to "Edit", edit_article_path(article) %><hr>
+
 
 <% end %>
 
-<hr>
-<%= link_to "New Article", new_article_path %>
+
+    <br><br><i><%= link_to "New Article", new_article_path %></i>
+</center>
