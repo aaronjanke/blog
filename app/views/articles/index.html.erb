@@ -1,0 +1,10 @@
+<h1>Home Page Of The Blog</h1>
+
+<% @articles.each do |article| %>
+
+<%= article.title %> * <%= article.description %> | <%= link_to "Show Post", article_path(article) %> | <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are You Sure?"} %> | <%= link_to "Edit", edit_article_path(article) %><br>
+
+<% end %>
+
+<hr>
+<%= link_to "New Article", new_article_path %>

@@ -1,0 +1,16 @@
+<h1>Create A Post</h1>
+
+<%= form_for @article do |a| %>
+
+<%= a.label :title  %><br>
+<%= a.text_field :title  %><br>
+
+<%= a.label :description  %><br>
+<%= a.text_area :description  %><br>
+
+<%= a.submit  %>
+
+<% end %>
+
+<hr>
+<%= link_to "New Article", new_article_path %>
