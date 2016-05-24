@@ -34,7 +34,7 @@ class ArticlesController < ApplicationController
     
     def update
         @article = Article.new(article_params)
-        if @article.save
+        if @article.update
             flash[:notice] = "Article Successfully Updated"
             redirect_to articles_path
         else
