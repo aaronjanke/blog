@@ -14,3 +14,14 @@
  *= require_self
  */
  
+a{
+ text-decoration: none;
+ background: #333;
+ padding: 10px;
+ color: #fff;
+ margin: 10px;
+}
+
+hr{
+  margin: 10px;
+}
